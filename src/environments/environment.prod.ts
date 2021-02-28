@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  dataUrl: 'https://my-json-server.typicode.com/HaibuSolutions/prueba-tecnica-sf/user'
 };

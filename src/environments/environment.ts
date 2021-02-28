@@ -3,8 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  dataUrl: 'https://my-json-server.typicode.com/HaibuSolutions/prueba-tecnica-sf/user'
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
