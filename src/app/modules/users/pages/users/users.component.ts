@@ -37,7 +37,6 @@ export class UsersComponent implements OnInit {
         this.user = user
         this.rutValidator(user.rut)
         this.birthdayValidator(user.fechaNacimiento)
-        console.log(this.user);
       });
   }
 

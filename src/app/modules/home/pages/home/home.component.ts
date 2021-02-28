@@ -29,7 +29,6 @@ export class HomeComponent implements OnInit {
     this.haibuSvc.getTeam()
       .subscribe(team => {
         this.team = new MatTableDataSource<User>(team)
-        console.log(this.team);
         this.team.sort = this.sort;
         this.spinner = false;
       })

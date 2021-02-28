@@ -1,6 +1,20 @@
 # HaibuFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+La prueba técnica fue diseñada en [Angular](https://github.com/angular/angular-cli) versión 11.2.1. Se utilizaron algunos componentes de Angular Material versión 11.2.2 para el diseño de la aplicación junto a SCSS. El diseño está pensado para teléfonos por lo que no fue necesario aplicar Media Queries.
+
+Los datos se pueden filtrar en base al nombre de cada persona, adicionalmente se puede ordenar la tabla haciendo clic en una columna de su encabezado (id, nombre, apellido o activo).
+
+En los detalles de cada persona se verifica si el Rut y la fecha son válidos. Para validar la fecha se utilizó la librería [moment.js](https://momentjs.com/) versión 2.29.1 y esta alojada en la carpeta: `src/assets/js/moment.js`
+
+La estructura de carpetas apunta a una aplicación que pueda escalar en el tiempo, basado en el estilo oficial de [angular](https://angular.io/guide/styleguide#overall-structural-guidelines).
+
+La carpeta `core` contiene servicios y componentes únicos, que se cargan una sola vez en el `app.module.ts`.
+
+La carpeta `material` contiene el módulo con todos los componentes de Angular Material utilizados.
+
+En la carpeta `modules` se designan las páginas y componentes de cada una (en esta aplicación no fue necesario modular los componentes de cada página). Cada página tiene su módulo con carga diferida definida en su archivo de rutas.
+
+Por esta vez, no se utilizó la carpeta `shared`. No hay directivas, pipes o componentes compartidos, de momento.
 
 ## Development server
 
