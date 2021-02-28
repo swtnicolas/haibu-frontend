@@ -1,5 +1,7 @@
 # HaibuFrontend
 
+Enlace del demo en --> [Firebase](https://swtnicolas.github.io/pokedex/) <--
+
 La prueba técnica fue diseñada en [Angular](https://github.com/angular/angular-cli) versión 11.2.1. Se utilizaron algunos componentes de Angular Material versión 11.2.2 para el diseño de la aplicación junto a SCSS. El diseño está pensado para teléfonos por lo que no fue necesario aplicar Media Queries.
 
 Los datos se pueden filtrar en base al nombre de cada persona, adicionalmente se puede ordenar la tabla haciendo clic en una columna de su encabezado (id, nombre, apellido o activo).
