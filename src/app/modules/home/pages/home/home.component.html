@@ -1,1 +1,67 @@
-<p>home works!</p>
+<section>
+  <!-- ------------------------------- Filtro -------------------------------- -->
+  <div class="filter">
+    <mat-form-field [style.width.px]="335" color="accent">
+      <mat-label>Buscar por nombre</mat-label>
+      <input
+        matInput
+        (keyup)="filter($event)"
+        placeholder="Buscar por nombre"
+        autocomplete="off"
+        #input
+      />
+    </mat-form-field>
+  </div>
+  <!-- -------------------------------- Tabla -------------------------------- -->
+  <table class="table" mat-table [dataSource]="team" matSort>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+      <td mat-cell *matCellDef="let user">
+        {{ user.id }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="nombre">
+      <th class="th-nombre" mat-header-cell *matHeaderCellDef mat-sort-header>
+        Nombre
+      </th>
+      <td mat-cell *matCellDef="let user">
+        {{ user.nombre }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="apellido">
+      <th class="th-nombre" mat-header-cell *matHeaderCellDef mat-sort-header>
+        Apellido
+      </th>
+      <td mat-cell *matCellDef="let user">
+        {{ user.apellido }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="activo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Activo</th>
+      <td mat-cell *matCellDef="let user">
+        {{ user.activo !== 0 ? "Activo" : "Inactivo" }}
+      </td>
+    </ng-container>
+    <!-- ----------- conjunto de filas, routerLink hacia el detalle ------------ -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let user; columns: displayedColumns"
+      [routerLink]="['users', user.id]"
+      class="table-rows"
+    ></tr>
+    <!-- -------------------------- Spinner y mensaje -------------------------- -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">
+        <div class="spinner" *ngIf="spinner">
+          <mat-spinner color="accent"></mat-spinner>
+        </div>
+        <p *ngIf="input.value" class="nodata">
+          No existen registros con el nombre:
+          <br />
+          "{{ input.value }}"
+        </p>
+      </td>
+    </tr>
+  </table>
+</section>

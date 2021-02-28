@@ -1,0 +1,40 @@
+section {
+  display: grid;
+  place-content: center;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table {
+  th {
+    color: #000000;
+  }
+  .th-nombre {
+    padding: 0 20px;
+  }
+  &-rows {
+    cursor: pointer;
+    &:hover {
+      background-color: #f4a3007e;
+    }
+    &:focus {
+      background-color: #f4a300d0;
+      outline: none;
+    }
+  }
+  .nodata {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
